@@ -19,3 +19,5 @@ $configurator->addConfig(__DIR__ . '/config/config.neon');
 $container = $configurator->createContainer();
 
 return $container;
+
+
