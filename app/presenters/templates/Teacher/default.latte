@@ -1,0 +1,37 @@
+{block content}
+
+ <h1 n:block="title">Teachers</h1>    
+    <h2><a n:href="Teacher:addTeacher">Add teacher</a></h2>
+  <h2><a n:href="Teacher:registerTeacher">Register teacher to course</a></h2>
+   <h2><a n:href="Sheet:default">My Sheets</a></h2>
+      <h2><a n:href="Sheet:editSheet">Edit </a></h2>
+
+
+      
+           <table>
+ <thead>
+  <tr>
+     <th>Jméno</th>
+     <th>Příjmení</th>
+     <th>Datum narození</th>
+     <th>Email</th>
+  </tr>
+ </thead>
+ <tbody>   
+{foreach $teachers as $teacher}
+
+  <tr>
+     <td>{$teacher->name}</td>
+     <td>{$teacher->surname}</td>
+       <td>{$teacher->dateOfBirth}</td>
+         <td>{$teacher->email}</td>
+  </tr>
+ 
+ 
+ 
+    {/foreach}
+    
+    </tbody>
+</table>
+    
+{/block}

@@ -1,0 +1,30 @@
+{block content}
+    <h1 n:block="title">My sheets</h1>
+    
+       <h2><a n:href="Sheet:createSheet">Create sheet</a></h2>
+
+       <table >
+<thead>
+	<tr>
+		
+		<th>Sheet</th>
+		<th>Date of creation</th>
+                <th></th>
+		
+	</tr>
+</thead>
+
+<tbody>
+	 {foreach $sheets as $sheet}
+	<tr>
+		<td>{$sheet->id_sheet}</td>
+                <td>{$sheet->dateOfCreation}</td>
+               <td><a n:href="Sheet:editSheet $sheet->id_sheet">SHOW</a> </td>
+		<td><a n:href="Sheet:generateSheet $sheet->id_sheet">EXPORT TO PDF</a> </td>
+	</tr>
+	{/foreach}
+</tbody>
+</table>
+ 
+{/block}
+

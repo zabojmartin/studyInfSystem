@@ -1,0 +1,22 @@
+{block content}
+    <h1 n:block="title">Můj blog</h1>
+
+  <fieldset>
+	<legend>Create sheet</legend>
+
+	{form createSheetForm}
+	<div class="task-form">
+		{control $form errors}
+
+                  {label course/} {input course} 
+                  {label numberOfHours/} {input numberOfHours} 
+                  {label note/} {input note} 
+                  
+                {input submit}
+	</div>
+	{/form}
+</fieldset> 
+   
+    
+{/block}
+

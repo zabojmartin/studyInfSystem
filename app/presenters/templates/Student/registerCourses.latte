@@ -1,0 +1,28 @@
+{block content}
+    <h1 n:block="title">Registered courses</h1>
+    
+   
+    <table class="tasks">
+
+
+<tbody>
+	 {foreach $courses as $post}
+	<tr>
+		<td>{$post->title}</td>
+                <td><a n:href="UnregisterSubject! $post->id_course" >UNREGISTER</a> </td>
+		
+	</tr>
+	{/foreach}
+</tbody>
+</table>
+
+    
+  <fieldset>
+
+	{control registerCourseForm}
+	
+</fieldset> 
+   
+    
+{/block}
+

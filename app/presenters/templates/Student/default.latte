@@ -1,0 +1,39 @@
+{block content}
+
+    
+ <h1 n:block="title">Students</h1>    
+    <h2><a n:href="Student:addStudent">Add student</a></h2>
+     <h2><a n:href="Student:registerCourses">Register courses</a></h2>
+  
+  
+           <table>
+ <thead>
+  <tr>
+     <th>Jméno</th>
+     <th>Příjmení</th>
+     <th>Datum narození</th>
+     <th>Email</th>
+  </tr>
+ </thead>
+
+ <tbody> 
+     
+  {foreach $students as $student}
+   
+        
+ 
+  <tr>
+     <td>{$student->name}</td>
+     <td>{$student->surname}</td>
+       <td>{$student->dateOfBirth}</td>
+         <td>{$student->email}</td>
+  </tr>
+ 
+
+ 
+    {/foreach}
+    
+     </tbody>
+</table>
+    
+{/block}

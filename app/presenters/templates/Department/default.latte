@@ -1,0 +1,21 @@
+{block content}
+    <h1 n:block="title">Departments</h1>
+    
+    <h2><a n:href="Department:addDepartment">add department</a></h2>
+    
+
+    {foreach $departments as $key => $post}
+    <div class="post">
+     
+     
+        <p>{$post->name}</p>
+
+    </div>
+    {/foreach}
+    
+ 
+   
+   
+    
+{/block}
+

@@ -1,0 +1,36 @@
+{block content}
+    <h1 n:block="title">My sheets</h1>
+    
+    <h2>Sheet {$idSheet} </h2>
+     <td><a n:href="Record:addRecord $idSheet">Add new record</a> </td>
+
+       <table >
+<thead>
+	<tr>
+		
+		<th>Subject</th>
+		
+                <th>Hours</th>
+                 <th>Note</th>
+                <th></th>
+		
+	</tr>
+</thead>
+
+<tbody>
+	 {foreach $records as $record}
+	<tr>
+		<td>{$record->id_subject}</td>
+               
+                <td>{$record->numberOfHours}</td>
+                 <td>{$record->note}</td>
+               <td><a n:href="Record:editRecord, $idSheet, idRecord => $record->id_record">EDIT</a> </td>
+              
+		
+	</tr>
+	{/foreach}
+</tbody>
+</table>
+ 
+{/block}
+
